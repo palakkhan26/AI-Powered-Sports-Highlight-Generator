@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Sports Highlight Generator</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;scroll-behavior:smooth}
+body{background:#081428;color:#fff}
+header{background:#102446;padding:18px 50px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0}
+nav a{color:#fff;text-decoration:none;margin-left:25px}
+.hero{height:90vh;display:flex;justify-content:center;align-items:center;text-align:center;padding:40px;background:linear-gradient(135deg,#0f2d5c,#0a1d39)}
+.hero h1{font-size:54px;margin-bottom:20px}
+.hero p{font-size:20px;max-width:850px;line-height:1.6}
+.btn{margin-top:30px;padding:15px 35px;background:#00c896;color:#fff;border:none;border-radius:30px;font-size:18px}
+section{padding:70px}
+.section-title{text-align:center;font-size:38px;margin-bottom:40px}
+.cards,.dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card,.box{background:#12284d;padding:30px;border-radius:15px}
+.card:hover{transform:translateY(-8px);transition:.3s}
+.timeline{list-style:none;margin-top:15px}
+.timeline li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+footer{background:#102446;padding:25px;text-align:center}
+</style>
+</head>
+<body>
+<header>
+<h2>🏆 AI Sports Highlight Generator</h2>
+<nav>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#dashboard">Dashboard</a>
+</nav>
+</header>
+
+<section class="hero" id="about">
+<div>
+<h1>⚽🏏 AI Sports Highlight Generator</h1>
+<p>Automatically detects goals, wickets, fouls, penalties and key match moments using AI. Generates fan-friendly summaries, timestamps and match insights in seconds.</p>
+<button class="btn" onclick="document.getElementById('dashboard').scrollIntoView()">Explore Dashboard</button>
+</div>
+</section>
+
+<section id="features">
+<h2 class="section-title">Features</h2>
+<div class="cards">
+<div class="card"><h3>⚽ Football</h3><p>Detects goals, cards, penalties and exciting moments automatically.</p></div>
+<div class="card"><h3>🏏 Cricket</h3><p>Detects wickets, sixes, fours and turning points.</p></div>
+<div class="card"><h3>🤖 Multi-Agent AI</h3><p>Event Detection, Highlight Detection, Content Generation and Media Output.</p></div>
+<div class="card"><h3>📊 Analytics</h3><p>Interactive dashboard with summaries and match insights.</p></div>
+</div>
+</section>
+
+<section id="dashboard">
+<h2 class="section-title">Visualization Dashboard</h2>
+<div class="dashboard">
+<div class="box">
+<h3>Match Timeline</h3>
+<ul class="timeline">
+<li>05' Goal - Team A</li>
+<li>18' Yellow Card</li>
+<li>36' Penalty Saved</li>
+<li>58' Wicket</li>
+<li>74' Six Runs</li>
+<li>89' Winning Goal</li>
+</ul>
+</div>
+<div class="box">
+<h3>AI Summary</h3>
+<p>The AI analyzed the match, detected significant moments, and generated concise highlight summaries with timestamps for quick review.</p>
+</div>
+<div class="box">
+<h3>Statistics</h3>
+<p>⚽ Goals: 3</p>
+<p>🏏 Wickets: 6</p>
+<p>🟨 Cards: 4</p>
+<p>⭐ Highlights Generated: 18</p>
+</div>
+</div>
+</section>
+
+<footer>© 2026 AI Sports Highlight Generator | IBM SkillsBuild Project</footer>
+
+<script>
+  window.wxOConfiguration = {
+    orchestrationID: "88d49ca14dc94c329ffe8fafc3b8dabd_7f317011-61dc-4da0-ba03-8c2c1d4ccf45",
+    hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+    rootElementID: "root",
+    deploymentPlatform: "ibmcloud",
+    crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/88d49ca14dc94c329ffe8fafc3b8dabd:7f317011-61dc-4da0-ba03-8c2c1d4ccf45::",
+    chatOptions: {
+      agentId: "c8cf78aa-6171-4783-aab3-a7713a57baf9",
+    }
+  };
+
+  setTimeout(function () {
+    const script = document.createElement('script');
+    script.src = `${window.wxOConfiguration.hostURL}/wxochat/wxoLoader.js?embed=true`;
+    script.addEventListener('load', function () {
+      wxoLoader.init();
+    });
+    document.head.appendChild(script);
+  }, 0);
+</script>
+</body>
+</html>
